@@ -6,3 +6,18 @@ products = {
     "Mango": ["1.75", "40"]
 }
 total_sales_list = []
+
+for item, prod_list in products.items():
+    price, quantity_sold = prod_list
+    price = float(price)
+    quantity_sold = int(quantity_sold)
+    item_sale = quantity_sold * price
+    total_sales_list.append(item_sale)
+    print(f"Total sales for {item}: ${item_sale}")
+
+total_sum = sum(total_sales_list)
+print(f"Total sum of all sales: ${total_sum}")
+min_sales = min(total_sales_list)
+print(f"Minimum sales: ${min_sales}")
+max_sales = max(total_sales_list)
+print(f"Maximum sales: ${max_sales}")
